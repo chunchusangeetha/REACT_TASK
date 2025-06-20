@@ -12,22 +12,28 @@ import { AuthProvider } from "./components/AuthContext";
 import Services from "./pages/Services";
 import Profile from "./pages/Profile";
 
+const HEADER_HEIGHT = 72; // px
 export default function App() {
   return (
     <AuthProvider>
       <Router>
         <div className="flex min-h-screen flex-col bg-gradient-to-br from-blue-50 to-purple-100">
-          <Header />
-          <div className="flex flex-1">
+          <header
+            className="fixed top-0 left-0 w-full z-50 bg-white bg-opacity-90 shadow-md backdrop-blur-md"
+            style={{ height: HEADER_HEIGHT, transition: "box-shadow 0.2s" }}
+          >
+            <Header />
+          </header>
+          <div className="flex flex-1" style={{ paddingTop: HEADER_HEIGHT }}>
             <Sidebar />
-            <main className="flex-1 p-6 bg-white bg-opacity-90">
+            <main className="flex-1 p-6 bg-white bg-opacity-90 rounded-lg shadow-sm">
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/contact" element={<ContactUs />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/signup" element={<SignUp />} />
-                <Route path="/services" element={<Services/>}/>
-                <Route path="/profile" element={<Profile/>}/>
+                <Route path="/services" element={<Services />} />
+                <Route path="/profile" element={<Profile />} />
               </Routes>
             </main>
           </div>

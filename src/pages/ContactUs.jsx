@@ -3,12 +3,13 @@ import ContactForm from "../components/ContactForm";
 
 export default function ContactUs() {
   return (
-    <div className="max-w-xl mx-auto mt-8 bg-white p-6 rounded shadow-lg">
-      <h2 className="text-2xl font-bold mb-4 text-center text-blue-600">
-        Contact Us
-      </h2>
-      <ContactForm/>
-      
+    <div className="min-h-screen bg-blue-50 flex items-center justify-center p-8">
+      <div className="max-w-xl w-full bg-white p-8 rounded-lg shadow-lg">
+        <h2 className="text-3xl font-bold mb-6 text-center text-blue-600">
+          Contact Us
+        </h2>
+        <ContactForm />
+      </div>
     </div>
   );
 }

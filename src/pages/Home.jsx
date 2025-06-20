@@ -1,49 +1,122 @@
- import React from "react";
+import React from "react";
 
 export default function Home() {
-  const cards = [
-    { id: 1, title: "Card Title 1", description: "This is card 1." },
-    { id: 2, title: "Card Title 2", description: "This is card 2." },
-    { id: 3, title: "Card Title 3", description: "This is card 3." },
-    { id: 4, title: "Card Title 4", description: "This is card 4." },
+  const services = [
+    {
+      id: 1,
+      title: "Data Engineering",
+      description:
+        "Building efficient data pipelines, integrating diverse data sources, and ensuring data quality for robust analytics and reporting. Our team leverages modern tools to automate and optimize your data workflows.",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS59ZxUXmqfcngSl3qC5DKUKW2oA0rTYWlalg&s",
+      cta: "Explore Data Engineering",
+      ctaLink: "#data-engineering",
+    },
+    {
+      id: 2,
+      title: "Cloud Solutions",
+      description:
+        "Designing scalable, secure, and cost-effective cloud architectures tailored to your business needs. We help you migrate, manage, and optimize your cloud infrastructure for maximum efficiency.",
+      image:
+        "https://media.istockphoto.com/id/1254718662/photo/cloud-computing-technology-and-online-data-storage-for-business-network-concept.jpg?s=612x612&w=0&k=20&c=9qKGNWQ-bPlYF1bO2nLebRNGbfHJcw3LPgeUq7tu2S0=",
+      cta: "See Cloud Solutions",
+      ctaLink: "#cloud-solutions",
+    },
+    {
+      id: 3,
+      title: "Business Intelligence",
+      description:
+        "Transforming raw data into actionable insights with interactive dashboards and advanced analytics. Empower your teams to make data-driven decisions with our BI expertise.",
+      image:
+        "https://cdn.corporatefinanceinstitute.com/assets/business-intelligence.jpeg",
+      cta: "Discover BI Services",
+      ctaLink: "#business-intelligence",
+    },
+    {
+      id: 4,
+      title: "AI & Machine Learning",
+      description:
+        "Implementing intelligent systems that automate processes, predict trends, and personalize experiences. From model development to deployment, we bring AI to your business.",
+      image: "https://www.beyondkey.com/BkNew/images/GenAI/banner.jpg",
+      cta: "Learn About AI & ML",
+      ctaLink: "#ai-ml",
+    },
   ];
 
   return (
     <div className="space-y-8">
-      <section className="bg-blue-200 p-10 rounded-lg text-center">
-        <h1 className="text-4xl font-bold mb-4">Example Header</h1>
+      <section className="bg-violet-400 p-10 rounded-lg text-center">
+        <h1 className="text-4xl font-bold mb-4">Welcome to Data Artisans</h1>
         <button className="bg-green-400 text-white px-6 py-2 rounded hover:bg-green-500 transition">
-          CTA Button
+          Get Started
         </button>
       </section>
 
-      <section className="grid grid-cols-3 gap-6">
-        <div className="col-span-2 bg-white p-4 rounded shadow">
-          <img src="https://via.placeholder.com/400x200" alt="Card" className="w-full rounded mb-4" />
-          <h2 className="text-2xl font-bold mb-2">Card Title</h2>
-          <p className="mb-4 text-gray-600">Detailed card description goes here.</p>
+      <section className="grid grid-cols-2 gap-6">
+        <div className="bg-white p-4 rounded shadow flex flex-col justify-center">
+          <img
+            src="https://kdsgroup.co.in/wp-content/uploads/2023/07/WhatsApp-Image-2023-07-22-at-5.37.43-PM-e1690027704968.jpeg"
+            alt="Key Service"
+            className="w-full rounded mb-4"
+          />
+          <h2 className="text-2xl font-bold mb-2">Our Key Service</h2>
+          <p className="mb-4 text-gray-600">
+            We specialize in crafting custom solutions that empower your
+            business with cutting-edge technology. From data engineering to AI,
+            our experts deliver end-to-end services for your digital
+            transformation journey.
+          </p>
           <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">
-            CTA Button
+            Learn More
           </button>
         </div>
 
+        {/* Right half: 4 cards in 2x2 grid */}
         <div className="grid grid-cols-2 gap-4">
-          {cards.map((card) => (
-            <div key={card.id} className="bg-white p-4 rounded shadow">
-              <img src="https://via.placeholder.com/150" alt="Card" className="w-full rounded mb-2" />
-              <h3 className="text-lg font-semibold mb-1">{card.title}</h3>
-              <p className="text-gray-600">{card.description}</p>
+          {services.map((service) => (
+            <div
+              key={service.id}
+              className="bg-white p-4 rounded shadow flex flex-col"
+            >
+              <img
+                src={service.image}
+                alt={service.title}
+                className="w-full h-32 object-cover rounded mb-2"
+              />
+              <h3 className="text-lg font-semibold mb-1">{service.title}</h3>
+              <p className="text-gray-600 mb-2">{service.description}</p>
+              <a
+                href={service.ctaLink}
+                className="mt-auto bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600 transition text-center"
+              >
+                {service.cta}
+              </a>
             </div>
           ))}
         </div>
       </section>
 
       <section className="grid grid-cols-2 gap-4 mt-8">
-        <div className="bg-gray-200 h-40 rounded flex items-center justify-center text-gray-600">
-          Chart Placeholder
+        <div className="bg-white p-4 rounded shadow">
+          <h3 className="text-lg font-semibold mb-2 text-center">
+            Data Usage Chart
+          </h3>
+          <img
+            src="https://img.freepik.com/premium-vector/bar-chart-with-reflection-blue-background-business-growth-performance-financial-statistics_120819-716.jpg"
+            alt="Data Usage Chart"
+            className="w-full h-40 object-cover rounded"
+          />
         </div>
-        <div className="bg-gray-200 h-40 rounded flex items-center justify-center text-gray-600">
-          Chart Placeholder
+
+        <div className="bg-white p-4 rounded shadow">
+          <h3 className="text-lg font-semibold mb-2 text-center">
+            Customer Growth Chart
+          </h3>
+          <img
+            src="https://img.freepik.com/premium-photo/3d-financial-growth-blue-money-business-graph-investment-market-profit-chart-with-currency-repo_795097-1947.jpg"
+            alt="Customer Growth Chart"
+            className="w-full h-40 object-cover rounded"
+          />
         </div>
       </section>
     </div>
