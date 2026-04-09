@@ -57,7 +57,7 @@ export default function Home() {
           <img
           src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
             alt="Key Service"
-            className="w-full rounded mb-4"
+            className="w-full h-full rounded mb-4"
           />
           <h2 className="text-2xl font-bold mb-2">Our Key Service</h2>
           <p className="mb-4 text-gray-600">
