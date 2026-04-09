@@ -55,7 +55,7 @@ export default function Home() {
       <section className="grid grid-cols-2 gap-6">
         <div className="bg-white p-4 rounded shadow flex flex-col justify-center">
           <img
-          src="https://static.vecteezy.com/system/resources/thumbnails/037/999/169/small/ai-generated-workspace-technology-highlight-the-integration-of-technology-in-the-office-background-image-generative-ai-photo.jpg"
+          src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
             alt="Key Service"
             className="w-full rounded mb-4"
           />
